@@ -142,4 +142,4 @@ PostFile(formData)
     .then(res => res.text())
     .then(body => console.log(body))*/
 
-module.exports = {Signup: Signup, Login: Login, Disconnect: Disconnect, Delete: Delete}
+module.exports = {Signup: Signup, Login: Login, Disconnect: Disconnect, Delete: Delete, PostFile: PostFile, NewDb: NewDb, GetDb: GetDb, UpdateDb: UpdateDb}
