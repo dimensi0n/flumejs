@@ -1,4 +1,6 @@
 const fetch = require('node-fetch')
+const fs = require('fs')
+const FormData = require('form-data')
 
 let token = 'yourtoken'
 
@@ -118,5 +120,26 @@ async function UpdateDb(name, content) {
     let res = await fetch('http://localhost:8080/db/write', init)
     return res
 }
+
+async function PostFile(file) {
+    let init = {
+        method: 'POST',
+        headers: {
+            'token': '1234'
+        },
+        body: file
+    }
+    let res = await fetch('http://localhost:8080/fs/post', init)
+    return res
+}
+
+/*let file = fs.createReadStream('800px-Mr.png')
+const formData = new FormData()
+formData.append('file', file)
+
+PostFile(formData)
+    .catch(err => console.log(err))
+    .then(res => res.text())
+    .then(body => console.log(body))*/
 
 module.exports = {Signup: Signup, Login: Login, Disconnect: Disconnect, Delete: Delete}
