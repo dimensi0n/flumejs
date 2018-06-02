@@ -16,5 +16,13 @@
     "flume",
     "cloud",
     "js"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimensi0n/flumejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dimensi0n/flumejs/issues"
+  },
+  "homepage": "https://github.com/dimensi0n/flumejs#readme"
 }

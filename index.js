@@ -118,3 +118,5 @@ async function UpdateDb(name, content) {
     let res = await fetch('http://localhost:8080/db/write', init)
     return res
 }
+
+module.exports = {Signup: Signup, Login: Login, Disconnect: Disconnect, Delete: Delete}
