@@ -118,12 +118,3 @@ async function UpdateDb(name, content) {
     let res = await fetch('http://localhost:8080/db/write', init)
     return res
 }
-
-UpdateDb('thedb', JSON.stringify(["new content"]))
-    .then(res => res.text())
-    .then(body => console.log(body))
-
-GetDb('thedb')
-    .then(res => res.text())
-    .then(body => console.log(body))
-
